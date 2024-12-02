@@ -1,35 +1,35 @@
 import axios from 'axios';
 
-// Create an instance of axios
+// 创建axios实例
 const api = axios.create({
-    baseURL: 'http://127.0.0.1', // Replace with your API base URL
-    timeout: 10000, //  `111Request timeout in milliseconds
+    baseURL: 'http://127.0.0.1:8080', //替换成你的接口地址
+    timeout: 10000, // 请求超时时间
     headers: {
-        'Content-Type': 'application/json',
-        'Authorization': 'Bearer YOUR_ACCESS_TOKEN' // Replace with your access token if needed
+        'Content-Type': 'application/json',// 设置传输类型
+        'Authorization': 'Bearer YOUR_ACCESS_TOKEN'//请求头
     }
 });
 
-// Add a request interceptor
+// 添加请求拦截器
 api.interceptors.request.use(
     config => {
-        // Do something before request is sent
+        // 发送请求前做一些处理
         return config;
     },
     error => {
-        // Do something with request error
+        // 请求错误处理
         return Promise.reject(error);
     }
 );
 
-// Add a response interceptor
+// 添加响应拦截器
 api.interceptors.response.use(
     response => {
-        // Do something with response data
+        // 响应数据处理
         return response;
     },
     error => {
-        // Do something with response error
+        // 响应错误处理
         return Promise.reject(error);
     }
 );
