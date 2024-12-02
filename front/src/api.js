@@ -2,8 +2,8 @@ import axios from 'axios';
 
 // Create an instance of axios
 const api = axios.create({
-    baseURL: 'https://api.example.com', // Replace with your API base URL
-    timeout: 10000, // Request timeout in milliseconds
+    baseURL: 'http://127.0.0.1', // Replace with your API base URL
+    timeout: 10000, //  `111Request timeout in milliseconds
     headers: {
         'Content-Type': 'application/json',
         'Authorization': 'Bearer YOUR_ACCESS_TOKEN' // Replace with your access token if needed
