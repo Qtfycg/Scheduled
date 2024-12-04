@@ -1,45 +1,24 @@
 <script setup>
-const url = "src\components\login.jpg"
+
 </script>
 
 <template>
 
 <template>
   <div class="login">  //登录页面
-    <el-container>
-        <div class="building"></div>
-      <!-- 主要部分 -->
-      <el-main>
-        <div class="login-imge">
 
-        </div>
-      </el-main>
-    </el-container>
   </div>
 </template>
 
 </template>
 
 <style scoped>
-#app{
-    font-family: 'Avenir', Helvetica, Arial, sans-serif;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    text-align: center;
-    color: #2c3e50;
-    margin-top: 0px;
-}
-body{
-  margin:0;
-  padding:0;
-  border:0
-}
-#building{
-  background:url("../src/components/login.jpg");
-  width:100%;
-  height:100%;
-  position:fixed;
-  background-size:100% 100%;
+.login {
+  background-image: url('@/assets/login.jpg'); /* 确保图片路径正确 */
+  background-size: cover; /* 使背景图片覆盖整个容器 */
+  background-position: center; /* 使背景图片居中 */
+  width: 100%;
+  height: 100vh; /* 使容器高度为视口高度 */
 }
 
 </style>
